@@ -31,7 +31,8 @@ const createUser = async (req,res)=>{
 
     // add to db
     try {
-        const user=await User.create({name});
+        const user= User.create({name});
+        await user.save();
         res.status(200).json(user);
     } catch (error) {
         return res.status(400).json({error:error.message})
