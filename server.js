@@ -22,7 +22,7 @@ const corsOptions ={
     // accessControlAllowCredentials:true,
     optionSuccessStatus:200
 }
-app.use(cors(corsOptions));
+app.use(cors());
 
 // routes
 app.use('/api/users',userRoute)
